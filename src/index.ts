@@ -1,5 +1,3 @@
-import './styles/global.scss';
-
 export { default as Alert, Props as AlertProps } from './components/alert';
 export { default as Button, Props as ButtonProps } from './components/button';
 export { default as Card, Props as CardProps } from './components/card';
