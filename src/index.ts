@@ -6,6 +6,7 @@ export { default as Card, Props as CardProps } from './components/card';
 export { default as Container, Props as ContainerProps } from './components/container';
 export { default as Form, Props as FormProps } from './components/form';
 export { default as Field, Props as FieldProps } from './components/field';
+export { default as Grid, Props as GridProps } from './components/grid';
 export { default as IconButton, Props as IconButtonProps } from './components/button/icon';
 export { default as InputField, Props as InputFieldProps } from './components/field/input';
 export { default as Layout, Props as LayoutProps } from './components/layout';

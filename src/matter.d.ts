@@ -8,4 +8,4 @@ type Toast = {
 type Option = {
   value: number;
   description: string;
-}
+};
