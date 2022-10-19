@@ -1,0 +1,71 @@
+@use "../../styles/breakpoints";
+@use "../../styles/colors";
+@use "../../styles/variants";
+
+.provider {
+  position: fixed;
+}
+
+.toast {
+  position: absolute;
+  right: 1rem;
+  left: 1rem;
+  top: 1rem;
+  padding: 0.75rem 1rem 1rem;
+  border-radius: 0.25rem;
+  transform: translate(0, -300%);
+  transition: 0.2s ease-in-out transform;
+  z-index: 100;
+  border-top: 0.25rem solid transparent;
+  color: white;
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .close {
+    outline: 0;
+    border: 0;
+    font-size: 1.25rem;
+    background: transparent;
+    color: white;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &.visible {
+    transform: translate(0, 0);
+  }
+
+  &.success {
+    @include variants.success;
+  }
+
+  &.info {
+    @include variants.info;
+  }
+
+  &.warning {
+    @include variants.warning;
+  }
+
+  &.error {
+    @include variants.error;
+  }
+
+  &.accent {
+    @include variants.accent;
+  }
+
+  @media (min-width: breakpoints.$tablet) {
+    transform: translate(300%, 0);
+    left: auto;
+    top: 5.25rem;
+    min-width: 18rem;
+  }
+}
