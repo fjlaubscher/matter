@@ -2,11 +2,9 @@
   "name": "matter",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
   "scripts": {
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
     "test": "jest",
     "format": "prettier --write \"**/src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "prettier --check \"**/src/**/*.{js,jsx,ts,tsx}\""
@@ -16,7 +14,7 @@
     "url": "git+https://github.com/fjlaubscher/matter.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Francois Laubscher",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fjlaubscher/matter/issues"
