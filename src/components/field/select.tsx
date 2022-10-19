@@ -5,7 +5,7 @@ import Field from '.';
 
 export interface Props {
   label: string;
-  options: Option[];
+  options: matter.Option[];
   onChange: (value: number) => void;
   name: string;
   value: number;

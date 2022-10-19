@@ -7,7 +7,7 @@ import { ToastAtom } from '../state/toast';
 const useToast = () => {
   const [toasts, setToasts] = useRecoilState(ToastAtom);
 
-  const toast = useCallback((toast: Toast) => setToasts([...toasts, toast]), [toasts, setToasts]);
+  const toast = useCallback((toast: matter.Toast) => setToasts([...toasts, toast]), [toasts, setToasts]);
 
   return toast;
 };
