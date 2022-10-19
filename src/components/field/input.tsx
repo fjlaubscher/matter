@@ -3,7 +3,7 @@ import React, { forwardRef } from 'react';
 // components
 import Field from '.';
 
-interface Props {
+export interface Props {
   label?: string;
   type: string;
   name?: string;

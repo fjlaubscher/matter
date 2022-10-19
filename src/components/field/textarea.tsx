@@ -5,7 +5,7 @@ import Field from '.';
 
 import styles from './field.module.scss';
 
-interface Props {
+export interface Props {
   label: string;
   name?: string;
   placeholder?: string;
