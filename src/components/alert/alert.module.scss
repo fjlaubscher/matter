@@ -1,0 +1,44 @@
+@use '../../styles/breakpoints';
+@use '../../styles/colors';
+@use '../../styles/variants';
+
+.alert {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+a {
+    color: inherit;
+  }
+
+&.success {
+    @include variants.success;
+  }
+
+&.info {
+    @include variants.info;
+  }
+
+&.warning {
+    @include variants.warning;
+  }
+
+&.error {
+    @include variants.error;
+  }
+
+&.accent {
+    @include variants.accent;
+  }
+}

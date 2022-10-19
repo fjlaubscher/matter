@@ -1,0 +1,18 @@
+$info-blue: #1a98ff;
+$warning-yellow: #ffa600;
+$error-red: #fd2c2c;
+$success-green: #4BCA81;
+
+$gallery: #f0f0f0;
+$dark-grey: #202020;
+
+$primary: #EA7317;
+$accent: #FE5E41;
+
+$light-background: $gallery;
+$light-surface: lighten($gallery, 5%);
+$light-text: $dark-grey;
+
+$dark-background: $dark-grey;
+$dark-surface: lighten($dark-grey, 5%);
+$dark-text: $gallery;

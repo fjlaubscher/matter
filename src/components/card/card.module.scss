@@ -1,0 +1,27 @@
+@use "../../styles/breakpoints";
+@use "../../styles/colors";
+
+.card {
+  background-color: colors.$light-surface;
+  color: colors.$light-text;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
+  transition: 0.2s background-color ease-in-out;
+
+  .title {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: colors.$dark-surface;
+    color: colors.$dark-text;
+  }
+}

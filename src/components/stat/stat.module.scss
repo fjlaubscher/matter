@@ -1,0 +1,54 @@
+@use '../../styles/colors';
+
+.stat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .title {
+    width: 100%;
+    color: colors.$accent;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+
+    @media (prefers-color-scheme: dark) {
+      font-weight: normal;
+    }
+  }
+
+  .value {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .description {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    color: lighten(colors.$light-text, 25%);
+
+    @media (prefers-color-scheme: dark) {
+      color: darken(colors.$dark-text, 25%);
+    }
+  }
+
+  &.info {
+    .value {
+      color: colors.$info-blue;
+    }
+  }
+
+  &.warning {
+    .value {
+      color: colors.$warning-yellow;
+    }
+  }
+
+  &.error {
+    .value {
+      color: colors.$error-red;
+    }
+  }
+}

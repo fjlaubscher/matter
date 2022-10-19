@@ -1,0 +1,43 @@
+@use '../../styles/colors';
+@use '../../styles/variants';
+
+.tagGroup {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  > span {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.tag {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
+  color: colors.$light-text;
+  background-color: colors.$light-surface;
+
+  &.success {
+    @include variants.success;
+  }
+
+  &.info {
+    @include variants.info;
+  }
+
+  &.warning {
+    @include variants.warning;
+  }
+
+  &.error {
+    @include variants.error;
+  }
+
+  &.accent {
+    @include variants.accent;
+  }
+}

@@ -1,0 +1,31 @@
+@use './colors';
+
+@mixin info {
+  color: white;
+  background-color: colors.$info-blue;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(colors.$info-blue, 0.2);
+}
+
+@mixin warning {
+  color: white;
+  background-color: colors.$warning-yellow;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(colors.$warning-yellow, 0.2);
+}
+
+@mixin error {
+  color: white;
+  background-color: colors.$error-red;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(colors.$error-red, 0.2);
+}
+
+@mixin success {
+  color: white;
+  background-color: colors.$success-green;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(colors.$success-green, 0.2);
+}
+
+@mixin accent {
+  color: white;
+  background-color: colors.$accent;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(colors.$accent, 0.2);
+}

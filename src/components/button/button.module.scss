@@ -1,0 +1,112 @@
+@use '../../styles/breakpoints';
+@use '../../styles/colors';
+@use '../../styles/variants';
+
+@mixin button {
+  width: 100%;
+  max-width: 24rem;
+  min-height: 2.75rem;
+  align-items: center;
+  outline: 0;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  background-color: colors.$primary;
+  color: white;
+  transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.button {
+  @include button;
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  gap: 0.75rem;
+
+  > div:nth-child(1) {
+    justify-self: flex-start;
+  }
+
+  > div:nth-child(2) {
+    justify-self: center;
+  }
+
+  > div:nth-child(3) {
+    justify-self: flex-end;
+  }
+
+  &.loading {
+    justify-content: center;
+    svg {
+      margin-left: 0;
+    }
+  }
+
+  &.success {
+    @include variants.success;
+  }
+
+  &.info {
+    @include variants.info;
+  }
+
+  &.warning {
+    @include variants.warning;
+  }
+
+  &.error {
+    @include variants.error;
+  }
+
+  &.accent {
+    @include variants.accent;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: darken(colors.$light-surface, 40%);
+  }
+}
+
+.iconButton {
+  @include button;
+  min-height: auto;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  box-shadow: none;
+
+  &.success {
+    @include variants.success;
+    box-shadow: none;
+  }
+
+  &.info {
+    @include variants.info;
+    box-shadow: none;
+  }
+
+  &.warning {
+    @include variants.warning;
+    box-shadow: none;
+  }
+
+  &.error {
+    @include variants.error;
+    box-shadow: none;
+  }
+
+  &.accent {
+    @include variants.accent;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: darken(colors.$light-surface, 40%);
+  }
+}
