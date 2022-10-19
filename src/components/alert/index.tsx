@@ -9,7 +9,7 @@ import styles from './alert.module.scss';
 export interface Props {
   className?: string;
   children: React.ReactNode;
-  variant: Variant;
+  variant: matter.Variant;
   title?: string;
 }
 

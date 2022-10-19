@@ -14,7 +14,7 @@ export interface Props {
   primary?: boolean;
   type?: 'button' | 'submit';
   onClick?: () => void;
-  variant?: Variant;
+  variant?: matter.Variant;
   form?: string;
 }
 

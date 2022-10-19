@@ -6,7 +6,7 @@ import styles from './tag.module.scss';
 export interface Props {
   children: React.ReactNode;
   className?: string;
-  variant?: Variant;
+  variant?: matter.Variant;
 }
 
 const Tag: React.FC<Props> = ({ children, className, variant }) => (

@@ -3,7 +3,7 @@ export const WARNING_MESSAGE = '🎲 Hmmm...';
 export const SUCCESS_MESSAGE = '🚀 Success!';
 export const ERROR_MESSAGE = '🔥 Something went wrong!';
 
-export const getMessageFromVariant = (variant: Variant) => {
+export const getMessageFromVariant = (variant: matter.Variant) => {
   switch (variant) {
     case 'info':
       return INFO_MESSAGE;

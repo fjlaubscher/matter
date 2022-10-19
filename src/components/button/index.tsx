@@ -16,7 +16,7 @@ export interface Props {
   onClick?: () => void;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
-  variant?: Variant;
+  variant?: matter.Variant;
 }
 
 const Button: React.FC<Props> = ({

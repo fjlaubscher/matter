@@ -8,7 +8,7 @@ export interface Props {
   description?: string;
   title: string;
   value: string | number;
-  variant?: 'info' | 'success' | 'error' | 'warning';
+  variant?: matter.Variant;
 }
 
 const Stat: React.FC<Props> = ({ className, description, title, value, variant }) => (
