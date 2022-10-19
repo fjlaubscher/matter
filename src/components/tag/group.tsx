@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import styles from './tag.module.scss';
 
-interface Props {
+export interface Props {
   children: React.ReactNode;
   className?: string;
 }

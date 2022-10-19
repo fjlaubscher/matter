@@ -6,7 +6,7 @@ import Container from '../container';
 
 import styles from './tabs.module.scss';
 
-interface Props {
+export interface Props {
   children: React.ReactNode;
   className?: string;
   tabs: string[];

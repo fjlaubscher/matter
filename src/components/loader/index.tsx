@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import styles from './loader.module.scss';
 
-interface Props {
+export interface Props {
   white?: boolean;
 }
 

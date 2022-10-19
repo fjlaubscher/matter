@@ -3,7 +3,7 @@ import React from 'react';
 
 import styles from './stat.module.scss';
 
-interface Props {
+export interface Props {
   className?: string;
   description?: string;
   title: string;

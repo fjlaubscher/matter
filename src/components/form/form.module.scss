@@ -1,0 +1,14 @@
+@use '../../styles/breakpoints';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  button {
+    max-width: none;
+  }
+}

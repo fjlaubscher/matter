@@ -6,7 +6,7 @@ import Loader from '../loader';
 
 import styles from './button.module.scss';
 
-interface Props {
+export interface Props {
   children: React.ReactNode;
   className?: string;
   disabled?: boolean;

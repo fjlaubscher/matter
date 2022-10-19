@@ -7,7 +7,7 @@ import Loader from '../loader';
 
 import styles from './layout.module.scss';
 
-interface Props {
+export interface Props {
   children: React.ReactNode;
   title: string;
   home: React.ReactNode;

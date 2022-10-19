@@ -1,5 +1,5 @@
 {
-  "name": "matter",
+  "name": "@fjlaubscher/matter",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",

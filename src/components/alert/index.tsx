@@ -6,7 +6,7 @@ import { getMessageFromVariant } from '../../helpers/messages';
 
 import styles from './alert.module.scss';
 
-interface Props {
+export interface Props {
   className?: string;
   children: React.ReactNode;
   variant: Variant;
