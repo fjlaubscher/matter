@@ -1,28 +1,30 @@
-@mixin info {
+@import './colors';
+
+@mixin variant-info {
   color: white;
   background-color: $info-blue;
   box-shadow: 0 0.125rem 0.125rem 0 rgba($info-blue, 0.2);
 }
 
-@mixin warning {
+@mixin variant-warning {
   color: white;
   background-color: $warning-yellow;
   box-shadow: 0 0.125rem 0.125rem 0 rgba($warning-yellow, 0.2);
 }
 
-@mixin error {
+@mixin variant-error {
   color: white;
   background-color: $error-red;
   box-shadow: 0 0.125rem 0.125rem 0 rgba($error-red, 0.2);
 }
 
-@mixin success {
+@mixin variant-success {
   color: white;
   background-color: $success-green;
   box-shadow: 0 0.125rem 0.125rem 0 rgba($success-green, 0.2);
 }
 
-@mixin accent {
+@mixin variant-accent {
   color: white;
   background-color: $accent;
   box-shadow: 0 0.125rem 0.125rem 0 rgba($accent, 0.2);
