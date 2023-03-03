@@ -9,7 +9,7 @@ export interface Props {
   simple?: boolean;
 }
 
-const Grid: React.FC<Props> = ({ className, children, simple }) => (
+const Grid = ({ className, children, simple }: Props) => (
   <div className={classNames(styles.grid, simple ? styles.simple : undefined, className)}>
     {children}
   </div>

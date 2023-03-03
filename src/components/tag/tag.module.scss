@@ -1,6 +1,3 @@
-@use '../../styles/colors';
-@use '../../styles/variants';
-
 .tagGroup {
   width: 100%;
   display: flex;
@@ -18,26 +15,26 @@
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
-  color: colors.$light-text;
-  background-color: colors.$light-surface;
+  color: $light-text;
+  background-color: $light-surface;
 
   &.success {
-    @include variants.success;
+    @include variant-success;
   }
 
   &.info {
-    @include variants.info;
+    @include variant-info;
   }
 
   &.warning {
-    @include variants.warning;
+    @include variant-warning;
   }
 
   &.error {
-    @include variants.error;
+    @include variant-error;
   }
 
   &.accent {
-    @include variants.accent;
+    @include variant-accent;
   }
 }

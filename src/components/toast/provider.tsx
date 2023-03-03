@@ -11,7 +11,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const ToastProvider: React.FC<Props> = ({ children }) => {
+const ToastProvider = ({ children }: Props) => {
   const [toasts, setToasts] = useRecoilState(ToastAtom);
 
   useEffect(() => {

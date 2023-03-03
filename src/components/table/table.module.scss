@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+
+  th {
+    padding: 0.25rem;
+    color: white;
+    background-color: $accent;
+    font-weight: 500;
+    padding-bottom: 0.25rem;
+    text-align: left;
+
+    @media (prefers-color-scheme: dark) {
+      color: $accent;
+      background-color: transparent;
+    }
+  }
+
+  td {
+    padding: 0.25rem;
+    vertical-align: top;
+    background-color: $light-surface;
+    border: 1px solid darken($light-background, 5%);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: $dark-surface;
+      border-color: lighten($dark-background, 15%);
+    }
+  }
+}

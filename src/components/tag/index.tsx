@@ -9,7 +9,7 @@ export interface Props {
   variant?: matter.Variant;
 }
 
-const Tag: React.FC<Props> = ({ children, className, variant }) => (
+const Tag = ({ children, className, variant }: Props) => (
   <span className={classnames(styles.tag, variant ? styles[variant] : undefined, className)}>
     {children}
   </span>

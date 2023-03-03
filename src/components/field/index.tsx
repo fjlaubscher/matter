@@ -9,7 +9,7 @@ export interface Props {
   error?: string;
 }
 
-const Field: React.FC<Props> = ({ className, children, error }) => (
+const Field = ({ className, children, error }: Props) => (
   <div className={classnames(styles.field, className)}>
     {children}
     {error && <div className={styles.error}>{error}</div>}

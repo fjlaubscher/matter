@@ -11,7 +11,7 @@ export interface Props {
   testId?: string;
 }
 
-const Form: React.FC<Props> = ({ children, className, id, onSubmit, testId }) => (
+const Form = ({ children, className, id, onSubmit, testId }: Props) => (
   <form
     id={id}
     className={classnames(styles.form, className)}

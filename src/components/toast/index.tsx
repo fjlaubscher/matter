@@ -9,7 +9,7 @@ import styles from './toast.module.scss';
 
 export const TOAST_VISIBLE_TIME = 3000;
 
-const Toast: React.FC<matter.Toast> = ({ text, variant }) => {
+const Toast = ({ text, variant }: matter.Toast) => {
   const [visible, setVisible] = useState(false);
   const toastPortal = document.getElementById('toast') as HTMLElement;
   const title = getMessageFromVariant(variant);

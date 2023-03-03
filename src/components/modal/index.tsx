@@ -8,7 +8,7 @@ export interface Props {
   visible: boolean;
 }
 
-const Modal: React.FC<Props> = ({ children, visible }) => (
+const Modal = ({ children, visible }: Props) => (
   <div className={classnames(styles.modal, visible && styles.visible)}>
     <div className={styles.content}>{children}</div>
   </div>

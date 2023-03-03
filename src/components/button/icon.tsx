@@ -18,7 +18,7 @@ export interface Props {
   form?: string;
 }
 
-const IconButton: React.FC<Props> = ({
+const IconButton = ({
   children,
   className,
   disabled = false,
@@ -27,7 +27,7 @@ const IconButton: React.FC<Props> = ({
   onClick,
   variant,
   form
-}) =>
+}: Props) =>
   loading ? (
     <Loader white />
   ) : (

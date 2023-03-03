@@ -8,7 +8,7 @@ export interface Props {
   className?: string;
 }
 
-const TagGroup: React.FC<Props> = ({ children, className }) => (
+const TagGroup = ({ children, className }: Props) => (
   <div className={classnames(styles.tagGroup, className)}>{children}</div>
 );
 

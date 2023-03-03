@@ -14,7 +14,7 @@ export interface Props {
   onChange: (index: number) => void;
 }
 
-const Tabs: React.FC<Props> = ({ children, className, tabs, active, onChange }) => {
+const Tabs = ({ children, className, tabs, active, onChange }: Props) => {
   const filteredTabs = useMemo(() => tabs.filter(Boolean), [tabs]);
   const filteredContent = useMemo(
     () => React.Children.toArray(children).filter(Boolean),

@@ -1,13 +1,10 @@
-@use '../../styles/breakpoints';
-@use '../../styles/colors';
-
 .container {
-  background-color: colors.$light-background;
+  background-color: $light-background;
   padding: 0;
   margin-bottom: 1rem;
 
   @media (prefers-color-scheme: dark) {
-    background-color: colors.$dark-background;
+    background-color: $dark-background;
   }
 }
 
@@ -19,18 +16,18 @@
 
   &::-webkit-scrollbar {
     height: 0.125rem;
-    background-color: colors.$light-background;
+    background-color: $light-background;
 
     @media (prefers-color-scheme: dark) {
-      background-color: colors.$dark-background;
+      background-color: $dark-background;
     }
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: colors.$light-surface;
+    background-color: $light-surface;
 
     @media (prefers-color-scheme: dark) {
-      background-color: colors.$dark-surface;
+      background-color: $dark-surface;
     }
   }
 }
@@ -40,8 +37,8 @@
   padding: 1rem;
   background-color: transparent;
   border: 0;
-  color: colors.$accent;
-  border-bottom: 0.125rem solid colors.$light-surface;
+  color: $accent;
+  border-bottom: 0.125rem solid $light-surface;
   text-decoration: none;
   transition: 0.2s ease-in-out border-color, 0.2s ease-in-out color;
   font-size: 0.8125rem;
@@ -55,15 +52,15 @@
   }
 
   &.active {
-    border-bottom-color: colors.$accent;
+    border-bottom-color: $accent;
   }
 
   @media (prefers-color-scheme: dark) {
-    border-bottom-color: colors.$dark-surface;
+    border-bottom-color: $dark-surface;
     font-weight: normal;
   }
 
-  @media (min-width: breakpoints.$tablet) {
+  @media (min-width: $breakpoint-tablet) {
     font-size: 0.9rem;
   }
 }

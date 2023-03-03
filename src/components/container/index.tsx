@@ -8,7 +8,7 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const Container: React.FC<Props> = ({ className, children }) => (
+const Container = ({ className, children }: Props) => (
   <div className={classnames(styles.container, className)}>{children}</div>
 );
 

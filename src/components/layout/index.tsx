@@ -16,7 +16,7 @@ export interface Props {
   isLoading?: boolean;
 }
 
-const Layout: React.FC<Props> = ({ children, title, action, home, menu, isLoading }) => (
+const Layout = ({ children, title, action, home, menu, isLoading }: Props) => (
   <div className={styles.container}>
     <div className={styles.navbar}>
       <nav>

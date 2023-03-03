@@ -1,12 +1,10 @@
-@use "../../styles/breakpoints";
-
 .container {
   padding: 1rem;
   width: 100%;
-  max-width: breakpoints.$large-desktop;
+  max-width: $breakpoint-large-desktop;
   margin: 0 auto;
 
-  @media screen and (min-width: calc(breakpoints.$large-desktop + 1px)) {
+  @media screen and (min-width: calc($breakpoint-large-desktop + 1px)) {
     padding-left: 0;
     padding-right: 0;
   }

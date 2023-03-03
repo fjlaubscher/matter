@@ -1,9 +1,6 @@
-@use "../../styles/breakpoints";
-@use "../../styles/colors";
-
 .card {
-  background-color: colors.$light-surface;
-  color: colors.$light-text;
+  background-color: $light-surface;
+  color: $light-text;
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
@@ -21,7 +18,7 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: colors.$dark-surface;
-    color: colors.$dark-text;
+    background-color: $dark-surface;
+    color: $dark-text;
   }
 }

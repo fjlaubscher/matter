@@ -10,7 +10,7 @@ export interface Props {
   onClick?: () => void;
 }
 
-const Card: React.FC<Props> = ({ className, children, title, onClick }) => (
+const Card = ({ className, children, title, onClick }: Props) => (
   <div className={classnames(styles.card, className)} onClick={onClick}>
     {title ? <p className={styles.title}>{title}</p> : undefined}
     {children}

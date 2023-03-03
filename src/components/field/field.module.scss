@@ -1,6 +1,3 @@
-@use '../../styles/breakpoints';
-@use '../../styles/colors';
-
 .field {
   display: flex;
   flex-direction: column;
@@ -8,17 +5,17 @@
 
   .error {
     margin-top: 0.25rem;
-    color: colors.$error-red;
+    color: $error-red;
   }
 
   label {
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 0.25rem;
-    color: colors.$light-text;
+    color: $light-text;
 
     @media (prefers-color-scheme: dark) {
-      color: colors.$accent;
+      color: $accent;
     }
   }
 
@@ -30,9 +27,9 @@
     min-height: 2.75rem;
     font-size: 1rem;
     line-height: 1rem;
-    color: colors.$light-text;
+    color: $light-text;
     background: transparent;
-    background-color: colors.$light-surface;
+    background-color: $light-surface;
     padding: 0.75rem;
     box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
@@ -41,8 +38,8 @@
     filter: none;
 
     @media (prefers-color-scheme: dark) {
-      color: colors.$dark-text;
-      background-color: colors.$dark-surface;
+      color: $dark-text;
+      background-color: $dark-surface;
     }
   }
 

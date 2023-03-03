@@ -11,7 +11,7 @@ export interface Props {
   variant?: matter.Variant;
 }
 
-const Stat: React.FC<Props> = ({ className, description, title, value, variant }) => (
+const Stat = ({ className, description, title, value, variant }: Props) => (
   <div className={classnames(styles.stat, variant ? styles[variant] : undefined, className)}>
     <span className={styles.title}>{title}</span>
     <span className={styles.value}>{value}</span>

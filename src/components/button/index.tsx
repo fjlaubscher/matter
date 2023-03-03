@@ -19,7 +19,7 @@ export interface Props {
   variant?: matter.Variant;
 }
 
-const Button: React.FC<Props> = ({
+const Button = ({
   children,
   className,
   disabled = false,
@@ -29,7 +29,7 @@ const Button: React.FC<Props> = ({
   leftIcon,
   rightIcon,
   variant
-}) => (
+}: Props) => (
   <button
     disabled={disabled}
     className={classnames(

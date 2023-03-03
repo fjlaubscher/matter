@@ -13,7 +13,7 @@ export interface Props {
   title?: string;
 }
 
-const Alert: React.FC<Props> = ({ children, variant, title, className }) => (
+const Alert = ({ children, variant, title, className }: Props) => (
   <article className={classnames(styles.alert, styles[variant], className)}>
     {<span className={styles.title}>{title || getMessageFromVariant(variant)}</span>}
     {children}

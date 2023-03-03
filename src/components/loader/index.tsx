@@ -7,7 +7,7 @@ export interface Props {
   white?: boolean;
 }
 
-const Loader: React.FC<Props> = ({ white }) => (
+const Loader = ({ white }: Props) => (
   <div className={classnames(styles.loader, white && styles.white)}>
     <div />
     <div />
