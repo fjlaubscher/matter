@@ -1,13 +1,13 @@
-@import "../../styles/breakpoints";
-@import "../../styles/colors";
+@use "../../styles/breakpoints";
+@use "../../styles/colors";
 
 .container {
-  background-color: $light-background;
+  background-color: colors.$light-background;
   padding: 0;
   margin-bottom: 1rem;
 
   @media (prefers-color-scheme: dark) {
-    background-color: $dark-background;
+    background-color: colors.$dark-background;
   }
 }
 
@@ -19,18 +19,18 @@
 
   &::-webkit-scrollbar {
     height: 0.125rem;
-    background-color: $light-background;
+    background-color: colors.$light-background;
 
     @media (prefers-color-scheme: dark) {
-      background-color: $dark-background;
+      background-color: colors.$dark-background;
     }
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $light-surface;
+    background-color: colors.$light-surface;
 
     @media (prefers-color-scheme: dark) {
-      background-color: $dark-surface;
+      background-color: colors.$dark-surface;
     }
   }
 }
@@ -40,8 +40,8 @@
   padding: 1rem;
   background-color: transparent;
   border: 0;
-  color: $accent;
-  border-bottom: 0.125rem solid $light-surface;
+  color: colors.$accent;
+  border-bottom: 0.125rem solid colors.$light-surface;
   text-decoration: none;
   transition: 0.2s ease-in-out border-color, 0.2s ease-in-out color;
   font-size: 0.8125rem;
@@ -55,15 +55,15 @@
   }
 
   &.active {
-    border-bottom-color: $accent;
+    border-bottom-color: colors.$accent;
   }
 
   @media (prefers-color-scheme: dark) {
-    border-bottom-color: $dark-surface;
+    border-bottom-color: colors.$dark-surface;
     font-weight: normal;
   }
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: breakpoints.$tablet) {
     font-size: 0.9rem;
   }
 }

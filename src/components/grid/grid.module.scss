@@ -1,20 +1,20 @@
-@import "../../styles/breakpoints";
+@use "../../styles/breakpoints";
 
 .grid {
   display: grid;
   grid-template-columns: 100%;
   gap: 1rem;
 
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: breakpoints.$tablet) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: breakpoints.$desktop) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
   &.simple {
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: breakpoints.$desktop) {
       grid-template-columns: 1fr 1fr;
     }
   }

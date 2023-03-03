@@ -1,5 +1,5 @@
-@import "../../styles/variants";
-@import "../../styles/colors";
+@use "../../styles/variants";
+@use "../../styles/colors";
 
 @mixin button {
   width: 100%;
@@ -9,7 +9,7 @@
   outline: 0;
   border: 0;
   padding: 0.75rem 1.5rem;
-  background-color: $primary;
+  background-color: colors.$primary;
   color: white;
   transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
   border-radius: 0.5rem;
@@ -47,28 +47,28 @@
   }
 
   &.success {
-    @include variant-success;
+    @include variants.success;
   }
 
   &.info {
-    @include variant-info;
+    @include variants.info;
   }
 
   &.warning {
-    @include variant-warning;
+    @include variants.warning;
   }
 
   &.error {
-    @include variant-error;
+    @include variants.error;
   }
 
   &.accent {
-    @include variant-accent;
+    @include variants.accent;
   }
 
   &:disabled {
     cursor: not-allowed;
-    background-color: darken($light-surface, 40%);
+    background-color: darken(colors.$light-surface, 40%);
   }
 }
 
@@ -80,32 +80,32 @@
   box-shadow: none;
 
   &.success {
-    @include variant-success;
+    @include variants.success;
     box-shadow: none;
   }
 
   &.info {
-    @include variant-info;
+    @include variants.info;
     box-shadow: none;
   }
 
   &.warning {
-    @include variant-warning;
+    @include variants.warning;
     box-shadow: none;
   }
 
   &.error {
-    @include variant-error;
+    @include variants.error;
     box-shadow: none;
   }
 
   &.accent {
-    @include variant-accent;
+    @include variants.accent;
     box-shadow: none;
   }
 
   &:disabled {
     cursor: not-allowed;
-    background-color: darken($light-surface, 40%);
+    background-color: darken(colors.$light-surface, 40%);
   }
 }

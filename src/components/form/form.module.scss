@@ -1,11 +1,11 @@
-@import "../../styles/breakpoints";
+@use "../../styles/breakpoints";
 
 .form {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
-  max-width: $breakpoint-max-form-width;
+  max-width: breakpoints.$max-form-width;
   margin-left: auto;
   margin-right: auto;
 

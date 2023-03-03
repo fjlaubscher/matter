@@ -1,4 +1,4 @@
-@import "../../styles/colors";
+@use "../../styles/colors";
 
 .loader {
   height: 100%;
@@ -9,7 +9,7 @@
   > div {
     width: 1rem;
     height: 1rem;
-    background-color: $accent;
+    background-color: colors.$accent;
     border-radius: 100%;
     animation: bounce 1.4s infinite ease-in-out both;
   }

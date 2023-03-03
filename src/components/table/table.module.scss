@@ -1,4 +1,4 @@
-@import "../../styles/colors";
+@use "../../styles/colors";
 
 .container {
   display: flex;
@@ -15,13 +15,13 @@
   th {
     padding: 0.25rem;
     color: white;
-    background-color: $accent;
+    background-color: colors.$accent;
     font-weight: 500;
     padding-bottom: 0.25rem;
     text-align: left;
 
     @media (prefers-color-scheme: dark) {
-      color: $accent;
+      color: colors.$accent;
       background-color: transparent;
     }
   }
@@ -29,12 +29,12 @@
   td {
     padding: 0.25rem;
     vertical-align: top;
-    background-color: $light-surface;
-    border: 1px solid darken($light-background, 5%);
+    background-color: colors.$light-surface;
+    border: 1px solid darken(colors.$light-background, 5%);
 
     @media (prefers-color-scheme: dark) {
-      background-color: $dark-surface;
-      border-color: lighten($dark-background, 15%);
+      background-color: colors.$dark-surface;
+      border-color: lighten(colors.$dark-background, 15%);
     }
   }
 }

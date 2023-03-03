@@ -1,5 +1,5 @@
-@import "../../styles/variants";
-@import "../../styles/colors";
+@use "../../styles/variants";
+@use "../../styles/colors";
 
 .tagGroup {
   width: 100%;
@@ -18,26 +18,26 @@
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
-  color: $light-text;
-  background-color: $light-surface;
+  color: colors.$light-text;
+  background-color: colors.$light-surface;
 
   &.success {
-    @include variant-success;
+    @include variants.success;
   }
 
   &.info {
-    @include variant-info;
+    @include variants.info;
   }
 
   &.warning {
-    @include variant-warning;
+    @include variants.warning;
   }
 
   &.error {
-    @include variant-error;
+    @include variants.error;
   }
 
   &.accent {
-    @include variant-accent;
+    @include variants.accent;
   }
 }

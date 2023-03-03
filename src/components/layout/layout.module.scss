@@ -1,6 +1,6 @@
-@import "../../styles/breakpoints";
-@import "../../styles/variants";
-@import "../../styles/colors";
+@use '../../styles/breakpoints';
+@use '../../styles/variants';
+@use '../../styles/colors';
 
 .container {
   display: flex;
@@ -9,7 +9,7 @@
 }
 
 .navbar {
-  background-color: $primary;
+  background-color: colors.$primary;
   color: white;
 
   nav {
@@ -37,7 +37,7 @@
       justify-self: flex-end;
     }
 
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: breakpoints.$desktop) {
       padding: 0 2rem;
     }
   }
@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: breakpoints.$desktop) {
     flex-direction: row-reverse;
   }
 }
@@ -59,7 +59,7 @@
   padding-bottom: 4.5rem;
   flex: 1;
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: breakpoints.$desktop) {
     padding-bottom: 1rem;
   }
 }
@@ -72,7 +72,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
-  background-color: $light-surface;
+  background-color: colors.$light-surface;
   box-shadow: 0 -0.5rem 0.5rem 0 rgba(0, 0, 0, 0.1);
 
   .action {
@@ -82,9 +82,9 @@
     text-decoration: none;
     font-size: 0.75rem;
     background-color: transparent;
-    color: $light-text;
-    background-color: $light-surface;
-    border-right: 0.125rem solid $light-background;
+    color: colors.$light-text;
+    background-color: colors.$light-surface;
+    border-right: 0.125rem solid colors.$light-background;
     padding: 0.5rem 0;
     box-shadow: none;
     border-radius: 0;
@@ -95,7 +95,7 @@
     }
 
     &.active {
-      color: $accent;
+      color: colors.$accent;
     }
 
     svg {
@@ -104,12 +104,12 @@
     }
 
     @media (prefers-color-scheme: dark) {
-      color: $dark-text;
-      background-color: $dark-surface;
-      border-right-color: $dark-background;
+      color: colors.$dark-text;
+      background-color: colors.$dark-surface;
+      border-right-color: colors.$dark-background;
     }
 
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: breakpoints.$desktop) {
       display: grid;
       grid-template-columns: 15% auto 15%;
       gap: 0.75rem;
@@ -118,7 +118,7 @@
       font-size: 1rem;
       margin-bottom: 1rem;
       border-radius: 0.5rem;
-      @include variant-accent;
+      @include variants.accent;
 
       svg {
         font-size: 1rem;
@@ -131,7 +131,7 @@
     }
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: breakpoints.$desktop) {
     position: static;
     display: flex;
     flex-direction: column;
@@ -141,6 +141,6 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: $dark-surface;
+    background-color: colors.$dark-surface;
   }
 }

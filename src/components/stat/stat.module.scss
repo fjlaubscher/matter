@@ -1,4 +1,4 @@
-@import "../../styles/colors";
+@use "../../styles/colors";
 
 .stat {
   width: 100%;
@@ -8,7 +8,7 @@
 
   .title {
     width: 100%;
-    color: $accent;
+    color: colors.$accent;
     font-size: 1rem;
     margin-bottom: 0.25rem;
     font-weight: 500;
@@ -27,28 +27,28 @@
     width: 100%;
     margin-top: 0.25rem;
     font-size: 0.8rem;
-    color: lighten($light-text, 25%);
+    color: lighten(colors.$light-text, 25%);
 
     @media (prefers-color-scheme: dark) {
-      color: darken($dark-text, 25%);
+      color: darken(colors.$dark-text, 25%);
     }
   }
 
   &.info {
     .value {
-      color: $info-blue;
+      color: colors.$info-blue;
     }
   }
 
   &.warning {
     .value {
-      color: $warning-yellow;
+      color: colors.$warning-yellow;
     }
   }
 
   &.error {
     .value {
-      color: $error-red;
+      color: colors.$error-red;
     }
   }
 }
