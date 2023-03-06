@@ -13,6 +13,7 @@ export { default as Loader, Props as LoaderProps } from './components/loader';
 export { default as Modal, Props as ModalProps } from './components/modal';
 export { default as SelectField, Props as SelectFieldProps } from './components/field/select';
 export { default as Stat, Props as StatProps } from './components/stat';
+export { default as Stack, Props as StackProps } from './components/stack';
 export { default as Tabs, Props as TabsProps } from './components/tabs';
 export { default as Table, Props as TableProps } from './components/table';
 export { default as Tag, Props as TagProps } from './components/tag';
