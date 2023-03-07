@@ -1,3 +1,4 @@
+@use "../../styles/breakpoints";
 @use "../../styles/colors";
 
 .modal {
@@ -31,5 +32,17 @@
   @media (prefers-color-scheme: dark) {
     background-color: colors.$dark-background;
     color: colors.$dark-text;
+  }
+
+  @media (min-width: breakpoints.$tablet) {
+    max-width: breakpoints.$max-form-width;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    max-width: breakpoints.$tablet;
+  }
+
+  @media (min-width: breakpoints.$large-desktop) {
+    max-width: breakpoints.$desktop;
   }
 }
