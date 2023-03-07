@@ -20,7 +20,7 @@
 }
 
 .content {
-  background-color: colors.$light-surface;
+  background-color: colors.$light-background;
   color: colors.$light-text;
   font-weight: 500;
   border-radius: 0.5rem;
@@ -29,7 +29,7 @@
   padding: 1rem;
 
   @media (prefers-color-scheme: dark) {
-    background-color: colors.$dark-surface;
+    background-color: colors.$dark-background;
     color: colors.$dark-text;
   }
 }
