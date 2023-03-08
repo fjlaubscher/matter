@@ -7,7 +7,7 @@ export interface Props {
   className?: string;
   children: React.ReactNode;
   title?: string;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 const Card = ({ className, children, title, onClick }: Props) => (

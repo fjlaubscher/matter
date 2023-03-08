@@ -13,7 +13,7 @@ export interface Props {
   loading?: boolean;
   primary?: boolean;
   type?: 'button' | 'submit';
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   variant?: matter.Variant;
