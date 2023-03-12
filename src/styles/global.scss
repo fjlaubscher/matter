@@ -34,8 +34,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--colors-light-background);
-  color: var(--colors-light-text);
+  background-color: var(--color-light-background);
+  color: var(--color-light-text);
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
