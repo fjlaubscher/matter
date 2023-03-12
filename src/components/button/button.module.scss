@@ -68,7 +68,7 @@
 
   &:disabled {
     cursor: not-allowed;
-    background-color: darken(colors.$light-surface, 40%);
+    background-color: darken(#f0f0f0, 40%);
   }
 }
 
@@ -106,6 +106,6 @@
 
   &:disabled {
     cursor: not-allowed;
-    background-color: darken(colors.$light-surface, 40%);
+    background-color: darken(#f0f0f0, 40%);
   }
 }

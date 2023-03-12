@@ -30,11 +30,11 @@
     padding: 0.25rem;
     vertical-align: top;
     background-color: colors.$light-surface;
-    border: 1px solid darken(colors.$light-background, 5%);
+    border: 1px solid var(--color-light-border);
 
     @media (prefers-color-scheme: dark) {
       background-color: colors.$dark-surface;
-      border-color: lighten(colors.$dark-background, 15%);
+      border-color: var(--color-dark-border);
     }
   }
 }
