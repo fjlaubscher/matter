@@ -1,6 +1,25 @@
-@use './colors';
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Source+Sans+Pro&display=swap');
+
+:root {
+  --color-info-blue: #1a98ff;
+  --color-warning-yellow: #ffa600;
+  --color-error-red: #fd2c2c;
+  --color-success-green: #4bca81;
+
+  --color-gallery: #f0f0f0;
+  --color-dark-grey: #202020;
+
+  --color-primary: #ea7317;
+  --color-accent: #fe5e41;
+
+  --color-light-background: var(--color-gallery);
+  --color-light-surface: lighten(var(--color-gallery), 5%);
+  --color-light-text: var(--color-dark-grey);
+
+  --color-dark-background: var(--color-dark-grey);
+  --color-dark-surface: lighten(var(--color-dark-grey), 5%);
+  --color-dark-text: var(--color-gallery);
+}
 
 * {
   box-sizing: border-box;
@@ -17,30 +36,30 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: colors.$light-background;
-  color: $light-text;
+  background-color: var(--colors-light-background);
+  color: var(--colors-light-text);
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 0.5rem;
-    background-color: colors.$light-background;
+    background-color: var(--color-light-background);
 
     @media (prefers-color-scheme: dark) {
-      background-color: colors.$dark-background;
+      background-color: var(--color-dark-background);
     }
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: colors.$light-surface;
+    background-color: var(--color-light-surface);
 
     @media (prefers-color-scheme: dark) {
-      background-color: colors.$dark-surface;
+      background-color: var(--color-dark-surface);
     }
   }
 
   @media (prefers-color-scheme: dark) {
-    background-color: colors.$dark-background;
-    color: colors.$dark-text;
+    background-color: var(--color-dark-background);
+    color: var(--color-dark-text);
   }
 }
 

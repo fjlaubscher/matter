@@ -1,18 +1,18 @@
-$info-blue: #1a98ff;
-$warning-yellow: #ffa600;
-$error-red: #fd2c2c;
-$success-green: #4BCA81;
+$info-blue: var(--color-info-blue);
+$warning-yellow: var(--color-warning-yellow);
+$error-red: var(--color-error-red);
+$success-green: var(--color-success-green);
 
-$gallery: #f0f0f0;
-$dark-grey: #202020;
+$gallery: var(--color-gallery);
+$dark-grey: var(--color-dark-grey);
 
-$primary: #EA7317 !default;
-$accent: #FE5E41 !default;
+$primary: var(--color-primary);
+$accent: var(--color-accent);
 
-$light-background: $gallery;
-$light-surface: lighten($gallery, 5%);
-$light-text: $dark-grey;
+$light-background: var(--color-light-background);
+$light-surface: var(--color-light-surface);
+$light-text: var(--color-light-text);
 
-$dark-background: $dark-grey;
-$dark-surface: lighten($dark-grey, 5%);
-$dark-text: $gallery;
+$dark-background: var(--color-dark-background);
+$dark-surface: var(--color-dark-surface);
+$dark-text: var(--color-dark-text);
