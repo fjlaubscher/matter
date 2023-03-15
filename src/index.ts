@@ -1,3 +1,4 @@
+// components
 export { default as Alert, Props as AlertProps } from './components/alert';
 export { default as Button, Props as ButtonProps } from './components/button';
 export { default as Card, Props as CardProps } from './components/card';
@@ -21,4 +22,7 @@ export { default as TagGroup, Props as TagGroupProps } from './components/tag/gr
 export { default as TextAreaField, Props as TextAreaFieldProps } from './components/field/textarea';
 export { default as Toast } from './components/toast';
 export { default as ToastProvider } from './components/toast/provider';
+
+// hooks
 export { default as useToast } from './hooks/use-toast';
+export { default as useLocalStorage } from './hooks/use-local-storage';

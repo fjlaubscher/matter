@@ -7,7 +7,7 @@ import { getMessageFromVariant } from '../../helpers/messages';
 
 import styles from './toast.module.scss';
 
-export const TOAST_VISIBLE_TIME = 3000;
+export const TOAST_VISIBLE_TIME = 2000;
 
 const Toast = ({ text, variant }: matter.Toast) => {
   const [visible, setVisible] = useState(false);
