@@ -3,15 +3,14 @@ import classnames from 'classnames';
 
 import styles from './image.module.scss';
 
-export interface Props {
-  className?: string;
-  alt: string;
-  src: string;
-}
+export type Props = React.DetailedHTMLProps<
+  React.ImgHTMLAttributes<HTMLImageElement>,
+  HTMLImageElement
+>;
 
-const Image = ({ className, alt, src }: Props) => (
+const Image = ({ className, ...rest }: Props) => (
   <div className={classnames(styles.image, className)}>
-    <img src={src} alt={alt} />
+    <img {...rest} />
   </div>
 );
 

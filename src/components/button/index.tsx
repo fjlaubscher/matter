@@ -6,18 +6,13 @@ import Loader from '../loader';
 
 import styles from './button.module.scss';
 
-export interface Props {
-  children: React.ReactNode;
-  className?: string;
-  disabled?: boolean;
+export type Props = {
   loading?: boolean;
   primary?: boolean;
-  type?: 'button' | 'submit';
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   variant?: matter.Variant;
-}
+} & React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
 const Button = ({
   children,
@@ -28,9 +23,11 @@ const Button = ({
   onClick,
   leftIcon,
   rightIcon,
-  variant
+  variant,
+  ...rest
 }: Props) => (
   <button
+    {...rest}
     disabled={disabled}
     className={classnames(
       styles.button,

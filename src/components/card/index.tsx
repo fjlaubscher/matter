@@ -3,16 +3,12 @@ import classnames from 'classnames';
 
 import styles from './card.module.scss';
 
-export interface Props {
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
+export type Props = {
   title?: string;
-  onClick?: React.MouseEventHandler<HTMLDivElement>;
-}
+} & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
-const Card = ({ id, className, children, title, onClick }: Props) => (
-  <div id={id} className={classnames(styles.card, className)} onClick={onClick}>
+const Card = ({ id, className, children, title, onClick, ...rest }: Props) => (
+  <div {...rest} id={id} className={classnames(styles.card, className)} onClick={onClick}>
     {title ? <p className={styles.title}>{title}</p> : undefined}
     {children}
   </div>
