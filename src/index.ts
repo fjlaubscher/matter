@@ -23,6 +23,10 @@ export { default as TextAreaField, Props as TextAreaFieldProps } from './compone
 export { default as Toast } from './components/toast';
 export { default as ToastProvider } from './components/toast/provider';
 
+// helpers
+export { capitalize, slugify } from './helpers/text';
+
 // hooks
 export { default as useToast } from './hooks/use-toast';
 export { default as useLocalStorage } from './hooks/use-local-storage';
+export { default as useAsync } from './hooks/use-async';
