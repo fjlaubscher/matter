@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-const useLocalStorage = <T>(key: string): [T | undefined, (data: T) => void] => {
+const useLocalStorage = <T>(key: string): [T | undefined, (data: T) => void, () => void] => {
   const storedJSON = localStorage.getItem(key);
   const parsed = storedJSON ? JSON.parse(storedJSON) : undefined;
   const [data, setData] = useState<T | undefined>(parsed);
@@ -13,7 +13,12 @@ const useLocalStorage = <T>(key: string): [T | undefined, (data: T) => void] => 
     [setData]
   );
 
-  return [data, storeAndSetData];
+  const deleteData = useCallback(() => {
+    setData(undefined);
+    localStorage.removeItem(key);
+  }, [setData]);
+
+  return [data, storeAndSetData, deleteData];
 };
 
 export default useLocalStorage;
