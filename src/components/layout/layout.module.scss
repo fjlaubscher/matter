@@ -89,3 +89,15 @@
     background-color: colors.$dark-surface;
   }
 }
+
+.search {
+  input[type='search'] {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    color: colors.$dark-text;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}
