@@ -10,15 +10,17 @@ export type Props = {
 const Table = ({ className, children, headings, ...rest }: Props) => (
   <div className={styles.container}>
     <table className={classnames(styles.table, className)} {...rest}>
-      <thead>
-        <tr>
-          {headings.map((heading, i) => (
-            <th className={heading.className} key={`table-heading-${i}`}>
-              {heading.text}
-            </th>
-          ))}
-        </tr>
-      </thead>
+      {headings.length > 0 ? (
+        <thead>
+          <tr>
+            {headings.map((heading, i) => (
+              <th className={heading.className} key={`table-heading-${i}`}>
+                {heading.text}
+              </th>
+            ))}
+          </tr>
+        </thead>
+      ) : undefined}
       <tbody>{children}</tbody>
     </table>
   </div>
