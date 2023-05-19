@@ -1,18 +1,17 @@
-import React, { useEffect } from 'react';
-import { useRecoilState } from 'recoil';
+import React, { useState, useEffect } from 'react';
 
 // components
 import Toast, { TOAST_VISIBLE_TIME } from '.';
 
 // state
-import { ToastAtom } from '../../state/toast';
+import ToastContext from '../../context/toast';
 
 interface Props {
   children: React.ReactNode;
 }
 
 const ToastProvider = ({ children }: Props) => {
-  const [toasts, setToasts] = useRecoilState(ToastAtom);
+  const [toasts, setToasts] = useState<matter.Toast[]>([]);
 
   useEffect(() => {
     if (toasts.length > 0) {
@@ -26,12 +25,12 @@ const ToastProvider = ({ children }: Props) => {
   }, [toasts, setToasts]);
 
   return (
-    <>
+    <ToastContext.Provider value={{ toasts, setToasts }}>
       {toasts.map((toast, index) => (
         <Toast key={`toast-${toast.variant}-${index}`} {...toast} />
       ))}
       {children}
-    </>
+    </ToastContext.Provider>
   );
 };
 

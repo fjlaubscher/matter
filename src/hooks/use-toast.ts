@@ -1,18 +1,12 @@
-import { useCallback } from 'react';
-import { useRecoilState } from 'recoil';
+import { useCallback, useContext } from 'react';
 
-// state
-import { ToastAtom } from '../state/toast';
+// context
+import ToastContext from '../context/toast';
 
 const useToast = () => {
-  const [toasts, setToasts] = useRecoilState(ToastAtom);
+  const { toasts, setToasts } = useContext(ToastContext);
 
-  const toast = useCallback(
-    (toast: matter.Toast) => setToasts([...toasts, toast]),
-    [toasts, setToasts]
-  );
-
-  return toast;
+  return useCallback((toast: matter.Toast) => setToasts([...toasts, toast]), [toasts, setToasts]);
 };
 
 export default useToast;

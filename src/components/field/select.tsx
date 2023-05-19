@@ -3,25 +3,16 @@ import React from 'react';
 // components
 import Field from '.';
 
-export interface Props {
-  label: string;
+export type Props = {
   options: matter.Option[];
-  onChange: (value: number) => void;
-  name: string;
-  value: number;
-}
+  label?: string;
+  errorMessage?: string;
+} & React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>;
 
-const SelectField = ({ label, name, value, options, onChange }: Props) => (
+const SelectField = ({ label, name, options, required, ...rest }: Props) => (
   <Field>
-    <label htmlFor={name}>{label}</label>
-    <select
-      id={name}
-      placeholder="Select an option"
-      value={value}
-      onChange={(e) => {
-        onChange(parseInt(e.currentTarget.value));
-      }}
-    >
+    {label && <label htmlFor={name}>{`${label} ${!required ? '(optional)' : ''}`}</label>}
+    <select id={name} name={name} {...rest} required={required}>
       <option>Select an option</option>
       {options.map((o, i) => (
         <option key={`option-${i}`} value={`${o.value}`}>

@@ -1,38 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 
 import styles from './modal.module.scss';
 
-export interface Props {
-  children: React.ReactNode;
-  className?: string;
-  visible: boolean;
-  onClose?: () => void;
-  onOverlayClick?: React.MouseEventHandler<HTMLDivElement> | undefined;
-}
+export type Props = React.DetailedHTMLProps<
+  React.DialogHTMLAttributes<HTMLDialogElement>,
+  HTMLDialogElement
+>;
 
-const Modal = ({ children, className, visible, onClose, onOverlayClick }: Props) => {
-  useEffect(() => {
-    if (onClose) {
-      const listener = (key: KeyboardEvent) => {
-        if (key.key === 'Escape') {
-          onClose();
-        }
-      };
-
-      document.addEventListener('keyup', listener);
-
-      return () => {
-        document.removeEventListener('keyup', listener);
-      };
-    }
-  }, []);
-
-  return (
-    <div className={classnames(styles.modal, visible && styles.visible)} onClick={onOverlayClick}>
-      <div className={classnames(styles.content, className)}>{children}</div>
-    </div>
-  );
-};
+const Modal = forwardRef<HTMLDialogElement, Props>(({ children, className, ...rest }, ref) => (
+  <dialog ref={ref} className={classnames(styles.modal, className)} {...rest}>
+    {children}
+  </dialog>
+));
 
 export default Modal;

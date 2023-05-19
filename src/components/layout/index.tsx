@@ -1,5 +1,4 @@
 import React from 'react';
-import classnames from 'classnames';
 
 // components
 import Container from '../container';
@@ -27,7 +26,7 @@ const Layout = ({ children, title, action, home, menu, isLoading }: Props) => (
     </div>
     <div className={styles.content}>
       <Container className={styles.children}>{isLoading ? <Loader /> : children}</Container>
-      {menu && <div className={classnames(styles.actionBar, styles.visible)}>{menu}</div>}
+      {menu && <div className={styles.menu}>{menu}</div>}
     </div>
   </div>
 );

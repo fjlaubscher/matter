@@ -1,15 +1,15 @@
 import React from 'react';
+import classnames from 'classnames';
 
 import styles from './table.module.scss';
 
-export interface Props {
+export type Props = {
   headings: { text: string; className?: string }[];
-  children: React.ReactNode;
-}
+} & React.DetailedHTMLProps<React.HTMLAttributes<HTMLTableElement>, HTMLTableElement>;
 
-const Table = ({ children, headings }: Props) => (
+const Table = ({ className, children, headings, ...rest }: Props) => (
   <div className={styles.container}>
-    <table className={styles.table}>
+    <table className={classnames(styles.table, className)} {...rest}>
       <thead>
         <tr>
           {headings.map((heading, i) => (

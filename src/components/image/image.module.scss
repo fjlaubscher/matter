@@ -1,11 +1,19 @@
 .image {
   display: block;
   width: 100%;
+  margin: 0;
   
   img {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
+  }
+
+  figcaption {
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    padding: 0.5rem 1rem;
   }
 }

@@ -9,14 +9,10 @@
   transition: 0.2s background-color ease-in-out;
 
   .title {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  p {
-    font-size: 0.9rem;
+    font-size: 1.25rem;
+    font-weight: bold;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   @media (prefers-color-scheme: dark) {

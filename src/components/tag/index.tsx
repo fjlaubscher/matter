@@ -3,14 +3,15 @@ import classnames from 'classnames';
 
 import styles from './tag.module.scss';
 
-export interface Props {
-  children: React.ReactNode;
-  className?: string;
+export type Props = {
   variant?: matter.Variant;
-}
+} & React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
 
-const Tag = ({ children, className, variant }: Props) => (
-  <span className={classnames(styles.tag, variant ? styles[variant] : undefined, className)}>
+const Tag = ({ children, className, variant, ...rest }: Props) => (
+  <span
+    className={classnames(styles.tag, variant ? styles[variant] : undefined, className)}
+    {...rest}
+  >
     {children}
   </span>
 );

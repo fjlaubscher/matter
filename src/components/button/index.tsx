@@ -8,45 +8,30 @@ import styles from './button.module.scss';
 
 export type Props = {
   loading?: boolean;
-  primary?: boolean;
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
   variant?: matter.Variant;
 } & React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
 const Button = ({
   children,
   className,
-  disabled = false,
   loading = false,
   type = 'button',
   onClick,
-  leftIcon,
-  rightIcon,
   variant,
   ...rest
 }: Props) => (
   <button
     {...rest}
-    disabled={disabled}
     className={classnames(
       styles.button,
-      loading && styles.loading,
+      loading ? styles.loading : undefined,
       variant ? styles[variant] : undefined,
       className
     )}
     type={type}
     onClick={onClick}
   >
-    {loading ? (
-      <Loader white />
-    ) : (
-      <>
-        <div>{leftIcon}</div>
-        <div>{children}</div>
-        <div>{rightIcon}</div>
-      </>
-    )}
+    {loading ? <Loader white /> : children}
   </button>
 );
 

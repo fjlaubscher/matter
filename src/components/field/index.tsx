@@ -3,16 +3,14 @@ import classnames from 'classnames';
 
 import styles from './field.module.scss';
 
-export interface Props {
-  className?: string;
-  children: React.ReactNode;
+export type Props = {
   error?: string;
-}
+} & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
-const Field = ({ className, children, error }: Props) => (
-  <div className={classnames(styles.field, className)}>
+const Field = ({ className, children, error, ...rest }: Props) => (
+  <div className={classnames(styles.field, className)} {...rest}>
     {children}
-    {error && <div className={styles.error}>{error}</div>}
+    {error && <span className={styles.error}>{error}</span>}
   </div>
 );
 

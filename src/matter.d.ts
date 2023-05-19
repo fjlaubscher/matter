@@ -7,7 +7,7 @@ declare namespace matter {
   };
 
   type Option = {
-    value: number;
+    value: string | number;
     description: string;
   };
 }

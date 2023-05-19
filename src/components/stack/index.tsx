@@ -3,15 +3,12 @@ import classnames from 'classnames';
 
 import styles from './stack.module.scss';
 
-export interface Props {
-  id?: string;
-  className?: string;
-  children: React.ReactNode;
-  direction: 'row' | 'column';
-}
+export type Props = {
+  direction?: 'column' | 'row';
+} & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
-const Stack = ({ id, className, children, direction }: Props) => (
-  <div id={id} className={classnames(styles.stack, styles[direction], className)}>
+const Stack = ({ className, children, direction = 'column', ...rest }: Props) => (
+  <div className={classnames(styles.stack, styles[direction], className)} {...rest}>
     {children}
   </div>
 );

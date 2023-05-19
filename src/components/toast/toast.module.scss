@@ -27,16 +27,6 @@
     margin-bottom: 0.25rem;
   }
 
-  .close {
-    outline: 0;
-    border: 0;
-    font-size: 1.25rem;
-    background: transparent;
-    color: white;
-    padding: 0;
-    cursor: pointer;
-  }
-
   &.visible {
     transform: translate(0, 0);
   }

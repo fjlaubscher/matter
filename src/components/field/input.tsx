@@ -3,29 +3,16 @@ import React, { forwardRef } from 'react';
 // components
 import Field from '.';
 
-export interface Props {
+export type Props = {
   label?: string;
-  type: string;
-  name?: string;
-  placeholder?: string;
   errorMessage?: string;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
-  required?: boolean;
-}
+} & React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
 const InputField = forwardRef<HTMLInputElement, Props>(
-  ({ label, name, type, placeholder, required, errorMessage, onChange }, ref) => (
+  ({ label, name, required, errorMessage, ...rest }, ref) => (
     <Field error={errorMessage}>
       {label && <label htmlFor={name}>{`${label} ${!required ? '(optional)' : ''}`}</label>}
-      <input
-        id={name}
-        onChange={onChange}
-        name={name}
-        type={type}
-        ref={ref}
-        placeholder={placeholder}
-        required={required}
-      />
+      <input ref={ref} id={name} name={name} required={required} {...rest} />
     </Field>
   )
 );

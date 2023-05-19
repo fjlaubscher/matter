@@ -3,16 +3,17 @@
 .field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
 
   .error {
+    font-size: 0.9rem;
     margin-top: 0.25rem;
     color: colors.$error-red;
+    font-weight: bold;
   }
 
   label {
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: bold;
     margin-bottom: 0.25rem;
     color: colors.$light-text;
 
@@ -30,7 +31,6 @@
     font-size: 1rem;
     line-height: 1rem;
     color: colors.$light-text;
-    background: transparent;
     background-color: colors.$light-surface;
     padding: 0.75rem;
     box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);

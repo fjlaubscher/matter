@@ -6,17 +6,10 @@ import Loader from '../loader';
 
 import styles from './button.module.scss';
 
-export interface Props {
-  children: React.ReactNode;
-  className?: string;
-  disabled?: boolean;
+export type Props = {
   loading?: boolean;
-  primary?: boolean;
-  type?: 'button' | 'submit';
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   variant?: matter.Variant;
-  form?: string;
-}
+} & React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
 const IconButton = ({
   children,

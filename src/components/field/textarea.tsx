@@ -5,24 +5,20 @@ import Field from '.';
 
 import styles from './field.module.scss';
 
-export interface Props {
-  label: string;
-  name?: string;
-  placeholder?: string;
+export type Props = {
+  label?: string;
   isFullHeight?: boolean;
-  required?: boolean;
   errorMessage?: string;
-  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
-}
+} & React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>;
 
 const TextAreaField = forwardRef<HTMLTextAreaElement, Props>(
   (
-    { label, name, placeholder, isFullHeight, required, errorMessage, onChange },
+    { label, name, isFullHeight, required, errorMessage, ...rest },
     ref: React.ForwardedRef<HTMLTextAreaElement>
   ) => (
     <Field className={isFullHeight ? styles.fullHeight : undefined} error={errorMessage}>
       <label htmlFor={name}>{`${label} ${!required ? '(optional)' : ''}`}</label>
-      <textarea id={name} onChange={onChange} name={name} ref={ref} placeholder={placeholder} />
+      <textarea id={name} name={name} ref={ref} {...rest} />
     </Field>
   )
 );

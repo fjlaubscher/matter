@@ -3,21 +3,10 @@ import classnames from 'classnames';
 
 import styles from './form.module.scss';
 
-export interface Props {
-  children: React.ReactNode;
-  className?: string;
-  id?: string;
-  onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
-  testId?: string;
-}
+export type Props = React.DetailedHTMLProps<React.HTMLAttributes<HTMLFormElement>, HTMLFormElement>;
 
-const Form = ({ children, className, id, onSubmit, testId }: Props) => (
-  <form
-    id={id}
-    className={classnames(styles.form, className)}
-    onSubmit={onSubmit}
-    data-testid={testId}
-  >
+const Form = ({ children, className, ...rest }: Props) => (
+  <form className={classnames(styles.form, className)} {...rest}>
     {children}
   </form>
 );
