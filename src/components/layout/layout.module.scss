@@ -54,7 +54,7 @@
 }
 
 .children {
-  padding: 1rem 1rem 4.5rem;
+  padding: 1rem 1rem 6rem;
   flex: 1;
 
   @media (min-width: breakpoints.$desktop) {
@@ -79,6 +79,7 @@
     position: static;
     display: flex;
     flex-direction: column;
+    justify-content: start;
     padding: 1rem;
     min-width: 16rem;
     box-shadow: -0.5rem 0 0.5rem 0 rgba(0, 0, 0, 0.1);
