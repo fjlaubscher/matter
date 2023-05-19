@@ -9,13 +9,18 @@ dialog[open].modal {
   width: 100%;
   max-width: 20rem;
   padding: 1rem;
-  background-color: colors.$light-background;
+  background-color: colors.$light-surface;
   color: colors.$light-text;
   border: 0;
   border-radius: 0.5rem;
 
+  .backdrop {
+    width: 100%;
+    padding: 0;
+  }
+
   @media (prefers-color-scheme: dark) {
-    background-color: colors.$dark-background;
+    background-color: colors.$dark-surface;
     color: colors.$dark-text;
   }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 import { useOnClickOutside, useLockedBody } from 'usehooks-ts';
 
@@ -9,31 +9,43 @@ export type Props = React.DetailedHTMLProps<
   HTMLDialogElement
 >;
 
-const Modal = ({ children, className, open, ...rest }: Props) => {
+const Modal = ({ children, className, open, onClose, ...rest }: Props) => {
+  const backdropRef = useRef<HTMLDivElement>(null);
   const ref = useRef<HTMLDialogElement>(null);
-  const [showModal, setShowModal] = useState(open);
+
+  const handleOnClose = useCallback(
+    (e: React.SyntheticEvent<HTMLDialogElement, Event>) => {
+      if (ref.current && onClose && open) {
+        ref.current.close();
+        onClose(e);
+      }
+    },
+    [ref, open, onClose]
+  );
 
   useLockedBody(open);
-  useOnClickOutside(ref, () => setShowModal(false));
+  useOnClickOutside(backdropRef, (e) =>
+    handleOnClose(e as unknown as React.SyntheticEvent<HTMLDialogElement, Event>)
+  );
 
   useEffect(() => {
-    if (ref.current) {
-      if (showModal) {
-        ref.current.showModal();
-      } else {
-        ref.current.close();
-      }
+    if (open) {
+      ref.current?.showModal();
+    } else {
+      ref.current?.close();
     }
-  }, [ref, showModal]);
+  }, [ref, open]);
 
   return (
     <dialog
-      {...rest}
-      onClose={() => setShowModal(false)}
       ref={ref}
       className={classnames(styles.modal, className)}
+      onClose={(e) => handleOnClose(e)}
+      {...rest}
     >
-      {children}
+      <div ref={backdropRef} className={styles.backdrop}>
+        {children}
+      </div>
     </dialog>
   );
 };

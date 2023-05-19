@@ -22,3 +22,9 @@ export { default as TagGroup, Props as TagGroupProps } from './components/tag/gr
 export { default as TextAreaField, Props as TextAreaFieldProps } from './components/field/textarea';
 export { default as Toast } from './components/toast';
 export { default as ToastProvider } from './components/toast/provider';
+
+// helpers
+export { capitalize, slugify } from './helpers/text';
+
+// hooks
+export { default as useToast } from './hooks/use-toast';
