@@ -47,18 +47,16 @@ const Layout = ({ children, title, action, home, menu, isLoading, onSearchChange
       <div className={styles.navbar}>
         <nav>
           <div className={styles.home}>{home}</div>
-          <div className={styles.search}>
-            {onSearchChange ? (
-              <InputField
-                type="search"
-                placeholder="Search"
-                name="search"
-                onChange={handleOnChange}
-              />
-            ) : (
-              title
-            )}
-          </div>
+          {onSearchChange ? (
+            <InputField
+              type="search"
+              placeholder="Search"
+              name="search"
+              onChange={handleOnChange}
+            />
+          ) : (
+            <h1 className={styles.title}>{title}</h1>
+          )}
           <div className={styles.action}>{action}</div>
         </nav>
       </div>
