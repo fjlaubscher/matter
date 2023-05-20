@@ -15,13 +15,13 @@ const meta: Meta<typeof Image> = {
 export const Default: StoryObj<typeof Layout> = {
   args: {
     home: (
-      <IconButton>
+      <IconButton variant="primary">
         <FaHome />
       </IconButton>
     ),
     title: 'Page Title',
     action: (
-      <IconButton>
+      <IconButton variant="primary">
         <FaPlus />
       </IconButton>
     ),
@@ -33,13 +33,13 @@ export const Default: StoryObj<typeof Layout> = {
 export const WithMenu: StoryObj<typeof Layout> = {
   args: {
     home: (
-      <IconButton>
+      <IconButton variant="primary">
         <FaHome />
       </IconButton>
     ),
     title: 'Page Title',
     action: (
-      <IconButton>
+      <IconButton variant="primary">
         <FaPlus />
       </IconButton>
     ),

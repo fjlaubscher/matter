@@ -1,5 +1,5 @@
-@use "../../styles/variants";
-@use "../../styles/colors";
+@use '../../styles/variants';
+@use '../../styles/colors';
 
 @mixin button {
   display: flex;
@@ -11,16 +11,21 @@
   outline: 0;
   border: 0;
   padding: 0.75rem 1.5rem;
-  background-color: colors.$primary;
-  color: white;
-  transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color;
+  background-color: colors.$light-surface;
+  color: colors.$accent;
+  transition: 0.2s ease-in-out background-color, 0.2s ease-in-out color,
+    0.2s ease-in-out border-color;
   border-radius: 0.5rem;
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1);
   position: relative;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: colors.$dark-surface;
+  }
 }
 
 .button {
@@ -50,6 +55,7 @@
 
   &.accent {
     @include variants.accent;
+    border: 0;
   }
 
   &:disabled {
@@ -63,32 +69,25 @@
   width: auto;
   min-height: auto;
   padding: 0.5rem;
-  font-size: 1.25rem;
-  box-shadow: none;
 
   &.success {
     @include variants.success;
-    box-shadow: none;
   }
 
   &.info {
     @include variants.info;
-    box-shadow: none;
   }
 
   &.warning {
     @include variants.warning;
-    box-shadow: none;
   }
 
   &.error {
     @include variants.error;
-    box-shadow: none;
   }
 
   &.accent {
     @include variants.accent;
-    box-shadow: none;
   }
 
   &:disabled {

@@ -1,4 +1,4 @@
-@use "../../styles/variants";
+@use '../../styles/variants';
 
 .alert {
   font-size: 0.9rem;
@@ -10,33 +10,33 @@
   flex-direction: column;
 
   .title {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
     font-size: 1.25rem;
     font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
   }
 
-a {
+  a {
     color: inherit;
   }
 
-&.success {
+  &.success {
     @include variants.success;
   }
 
-&.info {
+  &.info {
     @include variants.info;
   }
 
-&.warning {
+  &.warning {
     @include variants.warning;
   }
 
-&.error {
+  &.error {
     @include variants.error;
   }
 
-&.accent {
+  &.accent {
     @include variants.accent;
   }
 }

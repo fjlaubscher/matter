@@ -8,7 +8,7 @@ import styles from './button.module.scss';
 
 export type Props = {
   loading?: boolean;
-  variant?: matter.Variant;
+  variant?: 'primary' | matter.Variant;
 } & React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
 const IconButton = ({
