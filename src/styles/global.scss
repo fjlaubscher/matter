@@ -8,9 +8,9 @@
   --color-primary: #ea7317;
   --color-accent: #fe5e41;
 
-  --color-light-background: #fafafa;
-  --color-light-surface: #{lighten(#fafafa, 5%)};
-  --color-light-border: #{darken(#fafafa, 5%)};
+  --color-light-background: #f0f0f0;
+  --color-light-surface: #{lighten(#f0f0f0, 3%)};
+  --color-light-border: #{darken(#f0f0f0, 3%)};
   --color-light-text: #202020;
 
   --color-dark-background: #202020;
