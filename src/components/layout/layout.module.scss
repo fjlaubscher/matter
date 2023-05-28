@@ -36,6 +36,16 @@
       justify-self: end;
     }
 
+    input[type='search'] {
+      background-color: rgba(0, 0, 0, 0.1);
+      box-shadow: none;
+      color: colors.$dark-text;
+    
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+
     @media (min-width: breakpoints.$desktop) {
       padding: 0 2rem;
     }
@@ -87,15 +97,5 @@
 
   @media (prefers-color-scheme: dark) {
     background-color: colors.$dark-surface;
-  }
-}
-
-input[type='search'] {
-  background-color: rgba(0, 0, 0, 0.1);
-  box-shadow: none;
-  color: colors.$dark-text;
-
-  &::placeholder {
-    color: rgba(0, 0, 0, 0.4);
   }
 }
