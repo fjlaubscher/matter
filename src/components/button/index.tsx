@@ -21,7 +21,6 @@ const Button = ({
   ...rest
 }: Props) => (
   <button
-    {...rest}
     className={classnames(
       styles.button,
       loading ? styles.loading : undefined,
@@ -30,6 +29,7 @@ const Button = ({
     )}
     type={type}
     onClick={onClick}
+    {...rest}
   >
     {loading ? <Loader white /> : children}
   </button>

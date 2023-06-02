@@ -19,7 +19,8 @@ const IconButton = ({
   type = 'button',
   onClick,
   variant,
-  form
+  form,
+  ...rest
 }: Props) =>
   loading ? (
     <Loader white />
@@ -35,6 +36,7 @@ const IconButton = ({
       type={type}
       onClick={onClick}
       form={form}
+      {...rest}
     >
       {children}
     </button>
