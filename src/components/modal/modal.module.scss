@@ -8,6 +8,7 @@ dialog[open].modal {
   justify-content: center;
   width: 100%;
   max-width: 20rem;
+  max-height: calc(100% - 2rem);
   padding: 1rem;
   background-color: colors.$light-surface;
   color: colors.$light-text;
@@ -16,6 +17,7 @@ dialog[open].modal {
 
   .backdrop {
     width: 100%;
+    height: 100%;
     padding: 0;
   }
 
