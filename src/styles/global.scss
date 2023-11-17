@@ -27,6 +27,11 @@
   font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -73,6 +78,10 @@ svg {
 
 a {
   color: inherit;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.75);
 }
 
 form {

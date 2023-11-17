@@ -1,0 +1,70 @@
+@use '../../styles/breakpoints';
+
+.container {
+  background-color: var(--color-light-background);
+  padding: 0;
+  margin-bottom: 1rem;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-dark-background);
+  }
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 0.125rem;
+    background-color: var(--color-light-background);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-dark-background);
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-light-surface);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-dark-surface);
+    }
+  }
+}
+
+.tab {
+  text-align: center;
+  padding: 1rem;
+  background-color: transparent;
+  border: 0;
+  color: var(--color-accent);
+  border-bottom: 0.125rem solid var(--color-light-surface);
+  text-decoration: none;
+  transition:
+    0.2s ease-in-out border-color,
+    0.2s ease-in-out color;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  flex: 1;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &.active {
+    border-bottom-color: var(--color-accent);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    border-bottom-color: var(--color-dark-surface);
+    font-weight: normal;
+  }
+
+  @media (min-width: breakpoints.$tablet) {
+    font-size: 0.9rem;
+  }
+}

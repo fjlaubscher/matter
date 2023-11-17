@@ -1,26 +1,24 @@
-@use './colors';
-
 @mixin info {
-  color: colors.$dark-text;
-  background-color: colors.$info-blue;
+  color: var(--color-dark-text);
+  background-color: var(--color-info-blue);
 }
 
 @mixin warning {
-  color: colors.$dark-text;
-  background-color: colors.$warning-yellow;
+  color: var(--color-dark-text);
+  background-color: var(--color-warning-yellow);
 }
 
 @mixin error {
-  color: colors.$dark-text;
-  background-color: colors.$error-red;
+  color: var(--color-dark-text);
+  background-color: var(--color-error-red);
 }
 
 @mixin success {
-  color: colors.$dark-text;
-  background-color: colors.$success-green;
+  color: var(--color-dark-text);
+  background-color: var(--color-success-green);
 }
 
 @mixin accent {
-  color: colors.$dark-text;
-  background-color: colors.$accent;
+  color: var(--color-dark-text);
+  background-color: var(--color-accent);
 }

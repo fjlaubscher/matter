@@ -1,0 +1,40 @@
+@use '../../styles/breakpoints';
+
+dialog[open].modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+  max-width: 20rem;
+  max-height: calc(100% - 2rem);
+  padding: 1rem;
+  background-color: var(--color-light-surface);
+  color: var(--color-light-text);
+  border: 0;
+  border-radius: 0.5rem;
+
+  .backdrop {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-dark-surface);
+    color: var(--color-dark-text);
+  }
+
+  @media (min-width: breakpoints.$tablet) {
+    max-width: 500px;
+  }
+
+  @media (min-width: breakpoints.$desktop) {
+    max-width: breakpoints.$tablet;
+  }
+
+  @media (min-width: breakpoints.$large-desktop) {
+    max-width: breakpoints.$desktop;
+  }
+}

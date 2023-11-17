@@ -1,0 +1,34 @@
+@use '../../styles/variants';
+@use '../Button/Button.module' as Button;
+
+.iconButton {
+  @include Button.button;
+  width: auto;
+  min-height: auto;
+  padding: 0.5rem;
+
+  &.success {
+    @include variants.success;
+  }
+
+  &.info {
+    @include variants.info;
+  }
+
+  &.warning {
+    @include variants.warning;
+  }
+
+  &.error {
+    @include variants.error;
+  }
+
+  &.accent {
+    @include variants.accent;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: darken(#f0f0f0, 40%);
+  }
+}
