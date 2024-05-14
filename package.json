@@ -21,21 +21,24 @@
   },
   "homepage": "https://github.com/fjlaubscher/matter#readme",
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.5.3",
-    "@storybook/addon-interactions": "^7.5.3",
-    "@storybook/addon-links": "^7.5.3",
-    "@storybook/blocks": "^7.5.3",
-    "@storybook/react": "^7.5.3",
-    "@storybook/react-vite": "^7.5.3",
-    "classnames": "^2.3.2",
-    "prettier": "^3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.12.0",
-    "sass": "^1.69.5",
-    "storybook": "^7.5.3",
-    "typescript": "^5.2.2",
-    "usehooks-ts": "^2.9.1",
-    "vite": "^5.0.0"
+    "@storybook/addon-essentials": "^8.0.10",
+    "@storybook/addon-interactions": "^8.0.10",
+    "@storybook/addon-links": "^8.0.10",
+    "@storybook/blocks": "^8.0.10",
+    "@storybook/react": "^8.0.10",
+    "@storybook/react-vite": "^8.0.10",
+    "classnames": "^2.5.1",
+    "prettier": "^3.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "sass": "^1.77.1",
+    "storybook": "^8.0.10",
+    "typescript": "^5.4.5",
+    "usehooks-ts": "^3.1.0",
+    "vite": "^5.2.11"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
   }
 }

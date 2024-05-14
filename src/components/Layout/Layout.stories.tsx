@@ -54,30 +54,4 @@ export const WithMenu: StoryObj<typeof Layout> = {
   }
 };
 
-export const WithSearch: StoryObj<typeof Layout> = {
-  args: {
-    home: (
-      <IconButton>
-        <FaHome />
-      </IconButton>
-    ),
-    title: 'Page Title',
-    onSearchChange: (term) => Promise.resolve(console.log(term)),
-    action: (
-      <IconButton>
-        <FaPlus />
-      </IconButton>
-    ),
-    children:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit corrupti delectus fuga minus odit fugit voluptatum corporis illo veniam, eveniet atque, saepe sint architecto nostrum est? Aliquam sequi placeat magni.',
-    menu: (
-      <>
-        <Button>Menu Item 1</Button>
-        <Button>Menu Item 2</Button>
-        <Button>Menu Item 3</Button>
-      </>
-    )
-  }
-};
-
 export default meta;

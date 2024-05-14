@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 import classnames from 'classnames';
-import { useOnClickOutside, useLockedBody } from 'usehooks-ts';
+import { useOnClickOutside, useScrollLock } from 'usehooks-ts';
 
 import styles from './Modal.module.scss';
 
@@ -12,6 +12,9 @@ export type Props = React.DetailedHTMLProps<
 const Modal = ({ children, className, open, onClose, ...rest }: Props) => {
   const backdropRef = useRef<HTMLDivElement>(null);
   const ref = useRef<HTMLDialogElement>(null);
+  const { lock, unlock } = useScrollLock({
+    autoLock: false,
+  })
 
   const handleOnClose = useCallback(
     (e: React.SyntheticEvent<HTMLDialogElement, Event>) => {
@@ -23,18 +26,23 @@ const Modal = ({ children, className, open, onClose, ...rest }: Props) => {
     [ref, open, onClose]
   );
 
-  useLockedBody(open);
   useOnClickOutside(backdropRef, (e) =>
     handleOnClose(e as unknown as React.SyntheticEvent<HTMLDialogElement, Event>)
   );
 
-  useEffect(() => {
-    if (open) {
+  const handleDisplayModal = useCallback((show: boolean | undefined) => {
+    if (show) {
+      lock();
       ref.current?.showModal();
     } else {
+      unlock();
       ref.current?.close();
     }
-  }, [ref, open]);
+  }, [ref, lock, unlock])
+
+  useEffect(() => {
+    handleDisplayModal(open);
+  }, [open]);
 
   return (
     <dialog
