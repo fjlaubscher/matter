@@ -24,7 +24,7 @@ export { default as Toast } from './components/Toast';
 export { default as ToastProvider } from './components/ToastProvider';
 
 // helpers
-export { capitalize, slugify } from './helpers/text';
+export { capitalize, slugify, snakeCaseObjectToCamelCase, snakeCaseToCamelCase } from './helpers/text';
 
 // hooks
 export { default as useToast } from './hooks/use-toast';
